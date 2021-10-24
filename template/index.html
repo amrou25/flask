@@ -105,7 +105,7 @@ $("#save").click(function(){
  
  $.ajax({
    type: "GET",
-   url: "http://127.0.0.1:5000/save?val="+x+"&dt="+xd+"",
+   url: "https://ggt21.herokuapp.com/save?val="+x+"&dt="+xd+"",
    success:function(r){
    alert("Saved Successfully!")  
  
@@ -122,7 +122,7 @@ var  y=$("#year").text();
  var mn=$("#mont").text();
  $.ajax({
    type: "GET",
-   url: "http://127.0.0.1:5000/year?year="+y+"&month="+mn+"",
+   url: "https://ggt21.herokuapp.com/year?year="+y+"&month="+mn+"",
    success:function(r){
 var ed = r.replaceAll('_', ' ');
 var stff2=$("#sttp2").val();
@@ -218,7 +218,7 @@ var  y=$("#year").text();
  var stff=$("#sttp").val();
  $.ajax({
    type: "GET",
-   url: "http://127.0.0.1:5000/year?year="+y+"&month="+mn+"",
+   url: "https://ggt21.herokuapp.com/year?year="+y+"&month="+mn+"",
    success:function(r){
 var ed = r.replaceAll('_', ' ');
 
@@ -298,7 +298,7 @@ var  y=$("#year").text();
  var mn=$("#mont").text();
  $.ajax({
    type: "GET",
-   url: "http://127.0.0.1:5000/year?year="+y+"&month="+mn+"",
+   url: "https://ggt21.herokuapp.com/year?year="+y+"&month="+mn+"",
    success:function(r){
 var ed = r.replaceAll('_', ' ');
  
@@ -335,7 +335,7 @@ var b = cf.replaceAll(/\s+/g, '_');
 
  $.ajax({
    type: "GET",
-   url: "http://127.0.0.1:5000/abc?dt2="+xd2+"&val2="+b+"",
+   url: "https://ggt21.herokuapp.com/abc?dt2="+xd2+"&val2="+b+"",
    success:function(r){
      alert("Saved");
    },
@@ -354,7 +354,7 @@ var b = cf.replaceAll(/\s+/g, '_');
  alert($("#fullr").html());
  $.ajax({
    type: "GET",
-   url: "http://127.0.0.1:5000/abc?dt2="+dt3+"&val2="+upd2+"",
+   url: "https://ggt21.herokuapp.com/abc?dt2="+dt3+"&val2="+upd2+"",
    success:function(r){
   alert(ii+": (has been removed)");
  
@@ -371,7 +371,7 @@ var uut=usertt.value;
 
    $.ajax({
      type:"GET",
-     url:"http://127.0.0.1:5000/usersave?usern="+unn+"&userp="+upp+"&usert="+uut,
+     url:"https://ggt21.herokuapp.com/usersave?usern="+unn+"&userp="+upp+"&usert="+uut,
    success:function(r){
      
        alert(r);
