@@ -23,14 +23,14 @@
     width:100% !important;
     height:6%;
   }
+  
 </style>
 <script>
 //حفظ
   $(function(){
     
-     var ee=localStorage.getItem("lastname");
+var ee=localStorage.getItem("lastname");
     $(".vemp").text(ee);
-    
     /*
     var int=$(".int").text();
    var int2=parseFloat(int).toFixed(3);
@@ -344,41 +344,9 @@ var b = cf.replaceAll(/\s+/g, '_');
    }
  });
  });
- $("#del").click(function(){
-  var dn=$(".v1").text();
-  var dt3=$("#dt").html();
-  var ii=$("#fullr").find("#"+dn+"").children("#name").text();
- $("#fullr").find("#"+dn+"").parent().remove();
-   var upd=$("#fullr").html();
-  var upd2= upd.replaceAll(/\s+/g, '_');
- alert($("#fullr").html());
- $.ajax({
-   type: "GET",
-   url: "http://127.0.0.1:5000/abc?dt2="+dt3+"&val2="+upd2+"",
-   success:function(r){
-  alert(ii+": (has been removed)");
- 
-   },
-   error:function(e){
-     alert(e.code);
-   }
- });
- });
- $("#saveuser").click(function(){
-  var unn=usern.value;
-  var upp=userp.value;
-var uut=usertt.value;
 
-   $.ajax({
-     type:"GET",
-     url:"http://127.0.0.1:5000/usersave?usern="+unn+"&userp="+upp+"&usert="+uut,
-   success:function(r){
-     
-       alert(r);
-     }
-     
-   });
- });
+
+ 
 });
 
 </script>
@@ -437,36 +405,13 @@ var uut=usertt.value;
      </div>
    
 
-<div onclick="$('.page').hide();$('#salpage').show();" class="col btn-primary">
-      Sallary Systems
-     </div>
-  <div onclick="$('.page').hide();$('#user').show();" class="col btn-primary">
-      User Adminstration
-     </div>
+
+ 
      
    </div>
    
  </div><!--home-->
-<!--user-->
-<div style="display:none;" class="page" id="user">
-  <div class="">
-    
-  </div>
-  <center>
-  <input placeholder="UserName" type="text" name="" id="usern" value="" />
-  <input placeholder="Password" type="text" name="" id="userp" value="" /><br>
-  <select name="" id="usertt">
-<option value="Authorize">Authorize Type:</option>
-<option value="user">User</option>
- <option value="admin">Admin</option>
-  
-  </select>
-  <div id="saveuser" class="btn-primary">
-    Save
-  </div>
-  </center>
-   </div>
-   <!--user-->
+
 <div style="display:none;" class="page" id="quiery">
    <div class="row">
      <div class="col btn-success">Year</div>
@@ -492,9 +437,9 @@ var uut=usertt.value;
 <div class="col y btn-success">OV(HR)</div>
 <div class="col btn-success">Profit</div>
 <div class="col btn-success">Net Salary</div>
-     </div>
 <div id="qu" style="text-align:center;" class="btn-success">
    <i class="bi bi-patch-question">  </i>   Quiery
+     </div>
      </div>
  <div id="crq"></div>
 <div id="crqtot">
@@ -622,11 +567,10 @@ var uut=usertt.value;
  </div>
 <div class="row">
  <div style="text-align:center;" id="save" class="btn-primary col">Save</div>
-<div style="text-align:center;" id="del" class="btn-primary col">Delete</div>
- <div style="text-align:center;" id="qqu" class="btn-primary col">Query</div>
 
 </div>
- </div><br /><br />
+ </div><br /><br /><br />
 
 <footer onclick="$('.page').hide();$('#home').show();" class="btn-primary"><i class="bi bi-box-arrow-left">  </i>Home</footer>
+
 </body>
